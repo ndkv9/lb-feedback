@@ -57,7 +57,7 @@ const FeedBackBar = () => {
             }}
             noValidate
             autoComplete="off"
-            marginRight="50px"
+            marginRight="10px"
           >
           <div>
               <TextField
@@ -71,7 +71,7 @@ const FeedBackBar = () => {
               />
           </div>
           </Box>
-          <Button variant="contained" color="secondary">Submit</Button>
+          <Button variant="contained" color="secondary" className={classes.btn}>Submit</Button>
         </Toolbar>
       </Container>
     </AppBar>
