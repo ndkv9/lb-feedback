@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -50,6 +51,9 @@ const FeedBackBar = () => {
           <Box sx={{ flexGrow: 1 }}>
             <Avatar alt="Remy Sharp" src="https://stripe-images.s3.us-west-1.amazonaws.com/works-with/0bf92fa8419e3237a6fb6eac9b1c225099f96741" />
           </Box>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} align="center">
+            Happy with our bot? Give us feedback
+          </Typography>
           <Box
             component="form"
             sx={{
