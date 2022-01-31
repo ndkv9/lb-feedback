@@ -6,13 +6,44 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#424242',
+      main: '#212121',
+      dark: '#000',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#d80711',
+      dark: '#f44336',
+      contrastText: '#fff',
+    },
+  },
+});
+
+const useStyles = makeStyles({
+  bar: {
+    backgroundColor: "#fff",
+    color: "#000",
+    borderRadius: "5px",
+  },
+})
+
 
 const FeedBackBar = () => {
+  const classes = useStyles()
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <ThemeProvider theme={theme}>
+    <AppBar position="static" >
+      <Container maxWidth="xl" color="primary">
+        <Toolbar disableGutters >
           <Box sx={{ flexGrow: 1 }}>
             <Avatar alt="Remy Sharp" src="https://stripe-images.s3.us-west-1.amazonaws.com/works-with/0bf92fa8419e3237a6fb6eac9b1c225099f96741" />
           </Box>
@@ -25,20 +56,23 @@ const FeedBackBar = () => {
             autoComplete="off"
             marginRight="50px"
           >
-            <div>
+          <div>
               <TextField
                 id="standard-textarea"
                 label="Feedback"
                 placeholder="Placeholder"
                 multiline
-                variant="standard"
+                variant="filled"
+                size="small"
+                className={classes.bar}
               />
-            </div>
+          </div>
           </Box>
-          <Button variant="contained">Submit</Button>
+          <Button variant="contained" color="secondary">Submit</Button>
         </Toolbar>
       </Container>
     </AppBar>
+    </ThemeProvider>
   );
 };
 
