@@ -28,11 +28,14 @@ const theme = createTheme({
 });
 
 const useStyles = makeStyles({
-  bar: {
+  field: {
     backgroundColor: "#fff",
     color: "#000",
     borderRadius: "5px",
   },
+  btn: {
+    height: "48px",
+  }
 })
 
 
@@ -64,7 +67,7 @@ const FeedBackBar = () => {
                 multiline
                 variant="filled"
                 size="small"
-                className={classes.bar}
+                className={classes.field}
               />
           </div>
           </Box>
