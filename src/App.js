@@ -1,9 +1,10 @@
 import React from 'react'
+import FeedBackBar from "./components/FeedBackBar";
 
 function App() {
   return (
    <div>
-     <h3>Feedback Bar</h3>
+     <FeedBackBar />
    </div>
   );
 }
